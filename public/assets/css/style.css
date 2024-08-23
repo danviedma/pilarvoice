@@ -31,10 +31,10 @@ nav {
     background-color: rgba(255, 255, 255, 0.7);
     z-index: 10;
 }
-
-.logo h1 {
-    margin: 0;
-}
+.logo p{
+    margin: 0; 
+    font-size: 1.5rem;
+} 
 
 .nav-links {
     list-style: none;
