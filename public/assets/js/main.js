@@ -1,6 +1,10 @@
 document.getElementById('hamburger').addEventListener('click', function () {
     this.classList.toggle('active');
     document.getElementById('nav-links').classList.toggle('active');
+    
+    // Agrega o quita la clase al main cuando el menú está activo
+    const main = document.querySelector('main');
+    main.classList.toggle('menu-open');
 });
 
 // Código para cargar y mostrar los testimonios aleatoriamente

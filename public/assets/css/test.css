@@ -1,13 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 nav {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
+    left: 0; 
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -46,40 +44,41 @@ nav {
     display: none;
     flex-direction: column;
     justify-content: space-around;
-    width: 30px;
-    height: 25px;
+    width: 24px; /* Ajuste del ancho */
+    height: 20px; /* Ajuste de la altura */
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     z-index: 20;
+    position: relative;
 }
 
 .hamburger span {
     width: 100%;
-    height: 3px;
+    height: 2px; /* Grosor de las barras */
     background: black;
     border-radius: 2px;
     transition: all 0.3s ease;
+    position: relative; /* Esto asegura que las líneas se posicionen correctamente */
 }
 
-/* Cambios de estilo cuando el menú está activo */
+/* Transformaciones para la "X" */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg);
-    top: 10px;
+    top: 0;
     position: absolute;
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* Desaparece la barra del medio */
 }
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg);
-    top: 10px;
+    top: 0;
     position: absolute;
 }
-
 .carousel {
     width: 100%;
     height: 100%;
@@ -105,7 +104,7 @@ nav {
     padding: 20px;
 }
 
-.test-container{
+.test-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,6 +114,7 @@ nav {
     border-radius: 10px;
     background-color: #f9f9f9;
 }
+
 .card {
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -132,6 +132,7 @@ nav {
     font-size: 1rem;
     color: #555;
 }
+
 .pag-test-container {
     display: flex;
     flex-direction: column;
@@ -156,7 +157,7 @@ nav {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 100%;
+        top: 70px;
         left: 0;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.9);
@@ -174,45 +175,48 @@ nav {
 
     .nav-links a {
         font-size: 1.2rem;
+        color: black;
     }
 
     .testimonials-container {
         grid-template-columns: 1fr;
+        transition: margin-top 0.3s ease;
     }
-    .pag-test-container{
-        grid-template-columns: 1fr;
+
+    /* Ajuste de margen cuando el menú está activo */
+    main.menu-open {
+        margin-top: 500px; /* Ajusta el valor según la altura del menú desplegado */
     }
-  }
-  
-  /* Ajustes para pantallas medianas */
-  @media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
     nav {
-      padding: 1.5rem 2rem;
+        padding: 1.5rem 2rem;
     }
-  
+
     .nav-links {
-      gap: 0.8rem;
+        gap: 0.8rem;
     }
 
     .testimonials-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .pag-test-container {
         grid-template-columns: repeat(2, 1fr);
     }
-  }
-  
-  /* Ajustes para pantallas grandes */
-  @media (min-width: 1025px) {
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1025px) {
     nav {
-      padding: 2rem 3rem;
+        padding: 2rem 3rem;
     }
-  
+
     .nav-links {
-      gap: 1rem;
+        gap: 1rem;
     }
-  }
-  
-  /********/
+}
 
 
