@@ -271,11 +271,26 @@ button {
     box-shadow: 0 0 5px #A8DADC;
   }
 
-  .testimonials-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+  /* Estilos para una sola columna más estrecha */
+.testimonials-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Una columna */
+  gap: 20px;
+  padding: 20px;
+  max-width: 600px; /* Ancho máximo más estrecho */
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left; /* Alineación del texto a la izquierda */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  opacity: 0; /* Inicialmente oculta */
+  animation: fadeIn 5s ease forwards; /* Duración de 5 segundos */
+  animation-delay: var(--delay, 0s); /* Retraso personalizado para cada tarjeta */
 }
 
 .test-container{
@@ -288,13 +303,6 @@ button {
     border-radius: 10px;
     background-color: #f9f9f9;
 }
-.card {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-}
 
 .card h3{
     margin-bottom: 10px;
@@ -305,15 +313,6 @@ button {
 .card p {
     font-size: 1rem;
     color: #555;
-}
-
-/* Contenedor de los testimonios */
-.testimonials-container,
-.limited-testimonials-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    padding: 16px;
 }
 
 .test-container h2{

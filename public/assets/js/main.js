@@ -57,21 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const testimoniosUrl = './assets/data/testimonios.json';
     let testimonios = [];
     let currentIndex = 0;
-    const testimoniosPorCarga = 3;
+    const testimoniosPorCarga = 1; // Cargar uno por uno
 
     // Cargar el JSON
     fetch(testimoniosUrl)
         .then(response => response.json())
         .then(data => {
             testimonios = data.sort(() => Math.random() - 0.5); // Mezcla los testimonios aleatoriamente
-            cargarMasTestimonios(); // Cargar los primeros testimonios
+            cargarMasTestimonios(); // Cargar el primer testimonio
         })
         .catch(error => console.error('Error al cargar los testimonios:', error));
 
     function crearTestimonioCard(testimonio, index) {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.style.setProperty('--delay', `${index * 1}s`); // Retraso progresivo de 1 segundo por tarjeta
+        card.style.setProperty('--delay', `${index * 5}s`); // Retraso progresivo de 5 segundos por tarjeta
         card.innerHTML = `
             <h3>${testimonio.nombre}</h3>
             <p>${testimonio.texto}</p>
@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     }
 
-    // Modificación en la función cargarMasTestimonios
     function cargarMasTestimonios() {
         for (let i = 0; i < testimoniosPorCarga && currentIndex < testimonios.length; i++) {
             const testimonio = testimonios[currentIndex];
@@ -88,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Evento para detectar el scroll y cargar más testimonios
+    // Evento para detectar el scroll y cargar más testimonios uno por uno
     window.addEventListener('scroll', () => {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
             cargarMasTestimonios();
