@@ -110,7 +110,7 @@ nav {
     width: 100%;
     height: 100%;
     opacity: 0;
-    animation: slide 12s infinite;
+    animation: slide 24s infinite;
     
 }
 
@@ -165,33 +165,32 @@ nav {
   animation-delay: var(--delay, 0s); /* Retraso personalizado para cada tarjeta */
 }
 @keyframes slide {
-    0% {
-        opacity: 0;
-    }
-    8% {
-        opacity: 1;
-    }
-    33% {
-        opacity: 1;
-    }
-    41% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+      opacity: 0;
+  }
+  10% {
+      opacity: 1;
+  }
+  45% {
+      opacity: 1;
+  }
+  55% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 0;
+  }
 }
-
 .carousel-item:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s; /* Primera imagen comienza inmediatamente */
 }
 
 .carousel-item:nth-child(2) {
-    animation-delay: 4s;
+  animation-delay: 8s; /* Segunda imagen comienza después de 8 segundos */
 }
 
 .carousel-item:nth-child(3) {
-    animation-delay: 8s;
+  animation-delay: 16s; /* Tercera imagen comienza después de 16 segundos */
 }
 
 .service-center h2, .service h2{
@@ -341,7 +340,13 @@ button {
 }
 
   /******Responsive*+********/
-
+@media (min-width: 768px) {
+    .card p {
+        letter-spacing: 0.5px; /* Ajuste solo en pantallas grandes */
+        line-height: 1.6; 
+        font-size: 1.1rem; /* Aumenta ligeramente el tamaño de la fuente */
+    }
+}
 /* Ajustes generales para pantallas pequeñas */
 @media (max-width: 768px) {
     .hamburger {
