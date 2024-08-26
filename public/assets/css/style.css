@@ -338,6 +338,44 @@ button {
 .view-all-button:hover {
   background-color: #0056b3; /* Color al hacer hover */
 }
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000; /* Asegúrate de que estén siempre visibles */
+}
+
+.social-icons a i {
+  width: 15px; /* Ajusta el tamaño según tu preferencia */
+  height: 15px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a i {
+  font-size: 30px; /* Tamaño del ícono */
+  transition: transform 0.3s ease;
+}
+
+/* Colores específicos para cada red social */
+.social-icons a:nth-child(1) i {
+  color: #E1306C; /* Color de Instagram */
+}
+
+.social-icons a:nth-child(2) i {
+  color: #0077B5; /* Color de LinkedIn */
+}
+
+.social-icons a:nth-child(3) i {
+  color: #25D366; /* Color de WhatsApp */
+}
+
+/* Efecto de zoom al pasar el mouse */
+.social-icons a i:hover {
+  transform: scale(1.4); /* Aumenta el tamaño al pasar el mouse */
+}
 
   /******Responsive*+********/
 @media (min-width: 768px) {
