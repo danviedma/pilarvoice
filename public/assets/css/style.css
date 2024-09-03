@@ -123,7 +123,7 @@ nav {
 
 .carousel-caption {
     position: absolute;
-    bottom: 40%; 
+    bottom: 10%; 
     left: 60%; 
     transform: translateX(-50%);
     text-align: center;
@@ -377,7 +377,80 @@ button {
 .social-icons a i:hover {
   transform: scale(1.4); /* Aumenta el tamaño al pasar el mouse */
 }
+ 
+/* Estilos para la sección Acerca de mí */
+.div-about-container{
+  background-color: #f9f9f9;
+  /* background-color: #cccccc; */
+} 
+.about-container{
+  border-bottom: 1px solid #ccc;  
+  position: relative;
+}
+.about {
+  display: flex;
+  align-items: flex-start; /* Alinea el contenido en la parte superior */
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.about img {
+  width: 40%; /* Ajusta el ancho de la imagen */
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-top: 20px; /* Añade un margen superior para bajar la imagen */
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.about section {
+  flex: 1;
+  padding: 30px;
+  text-align: justify;
+}
+
+.about h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #2c3e50; /* Color de los títulos */
+  margin-bottom: 20px;
+  margin-top: 0; /* Alinea el h2 con la parte superior de la imagen */
+}
+
+.about p {
+  font-size: 1.125rem;
+  color: #34495e; /* Gris azulado para el texto */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  margin-top: 20px; /* Ajusta este valor según sea necesario */
+}
+
+
+
+/* Ajustes para la imagen cuando se hace hover */
+.about img:hover {
+  opacity: 1; /* Imagen más nítida al hacer hover */
+}
+
+/********Footer********/
+
+footer {
+    background-color: #f9f9f9;
+    background-color: #F5F5F5;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;  
+    padding: 40px;
+}
   /******Responsive*+********/
 @media (min-width: 768px) {
     .card p {
@@ -419,7 +492,7 @@ button {
   
     .carousel-caption {
       font-size: 1.5rem;
-      bottom: 20%; 
+      bottom: 10%; 
       left: 50%; 
     }
   
@@ -451,6 +524,20 @@ button {
     .social-icons{
       top:130px;
     }
+    .about {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about img {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .about section {
+      padding: 20px;
+  }
   }
   
   /* Ajustes para pantallas medianas */
@@ -486,7 +573,7 @@ button {
 
   .carousel-caption {
       font-size: 2rem;
-      bottom: 30%; 
+      bottom: 10%; 
       left: 50%; 
   }
 
@@ -526,16 +613,38 @@ button {
     .nav-links {
       gap: 1rem;
     }
+    .carousel-caption-wrapper {
+      position: absolute;
+      bottom: 5%; 
+      right: 10%; /* Mueve el contenedor hacia la derecha sin cambiar su tamaño */
+      max-width: 600px; /* Mantén el tamaño del contenedor */
+      width: 100%; /* Ajusta el ancho según el contenido */
+      pointer-events: none; /* Permite que los elementos subyacentes sigan siendo interactivos */
+  }
   
-    .carousel-caption {
+  .carousel-caption {
+      width: 100%; /* Asegura que el contenido ocupe el ancho máximo del contenedor */
+      pointer-events: all; /* Asegura la interactividad del contenido */
+      text-align: left; /* Mantén el texto alineado a la izquierda */
       font-size: 3rem;
-      bottom: 40%; 
-      left: 60%; 
-    }
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      background: none; /* Sin fondo */
+  }
   
-    .carousel-caption p {
+  .carousel-caption p {
+      text-align: center;
       font-size: 1.5rem;
-    }
+      color: black;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.7);
+      display: inline-block;
+      max-width: 100%; /* Asegura que el párrafo no se reduzca en tamaño */
+  }
+  
+  
+
   
     .service-container {
       flex-direction: row;
