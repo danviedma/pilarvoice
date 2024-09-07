@@ -1,59 +1,62 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body {
-    font-family: 'Libre Bodoni', serif;
-    letter-spacing: 1px;
+  font-family: 'Libre Bodoni', serif;
+  letter-spacing: 1px;
 }
 
 header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    color: black;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: black;
 }
 
 nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 3rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 10;
 }
-.logo p{
-    margin: 0; 
-    font-size: 1.5rem;
-} 
+
+.logo p {
+  margin: 0;
+  font-size: 1.5rem;
+}
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  text-transform: uppercase;
 }
 
 .nav-links a {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-    letter-spacing: 1px;
-    transition: color 0.3s;
-    font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  font-size: 0.8rem;
 }
 
 .nav-links a:hover {
-    color: #ffcc00;
+  color: #ffcc00;
 }
 
 /* Estilos generales para el menú hamburguesa */
@@ -61,8 +64,10 @@ nav {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 24px; /* Ancho ajustado */
-  height: 18px; /* Altura ajustada */
+  width: 24px;
+  /* Ancho ajustado */
+  height: 18px;
+  /* Altura ajustada */
   background: none;
   border: none;
   cursor: pointer;
@@ -73,7 +78,8 @@ nav {
 
 .hamburger span {
   width: 100%;
-  height: 2px; /* Grosor ajustado */
+  height: 2px;
+  /* Grosor ajustado */
   background: black;
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -98,187 +104,220 @@ nav {
 }
 
 .carousel {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .carousel-item {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: slide 24s infinite;
-    
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slide 24s infinite;
+
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-caption {
-    position: absolute;
-    bottom: 10%; 
-    left: 60%; 
-    transform: translateX(-50%);
-    text-align: center;
-    font-size: 3rem;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    background: none; /* Sin fondo */
+  position: absolute;
+  bottom: 10%;
+  left: 60%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  background: none;
+  /* Sin fondo */
 }
+
 .carousel-caption h2 {
-    margin: 0;
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra para mejor legibilidad */
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Añade sombra para mejor legibilidad */
 }
 
 .carousel-caption p {
-    margin: 0;
-    font-size: 1.5rem;
-    color: black;
-    padding: 1rem 2rem; /* Aumenta el padding horizontal para darle forma rectangular */
-    border-radius: 15px; /* Aplica un radio de borde para hacer los bordes redondeados */
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
-    display: inline-block; /* Asegura que el fondo se ajuste al contenido */
+  margin: 0;
+  font-size: 1.5rem;
+  color: black;
+  padding: 1rem 2rem;
+  /* Aumenta el padding horizontal para darle forma rectangular */
+  border-radius: 15px;
+  /* Aplica un radio de borde para hacer los bordes redondeados */
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Fondo blanco semitransparente */
+  display: inline-block;
+  /* Asegura que el fondo se ajuste al contenido */
 }
+
 /* Animación fade-in aún más lenta */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
+
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .card {
-  opacity: 0; /* Inicia oculta */
-  animation: fadeIn 5s ease forwards; /* Duración de 5 segundos */
-  animation-delay: var(--delay, 0s); /* Retraso personalizado para cada tarjeta */
+  opacity: 0;
+  /* Inicia oculta */
+  animation: fadeIn 5s ease forwards;
+  /* Duración de 5 segundos */
+  animation-delay: var(--delay, 0s);
+  /* Retraso personalizado para cada tarjeta */
 }
+
 @keyframes slide {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
+
   10% {
-      opacity: 1;
+    opacity: 1;
   }
+
   45% {
-      opacity: 1;
+    opacity: 1;
   }
+
   55% {
-      opacity: 0;
+    opacity: 0;
   }
+
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
+
 .carousel-item:nth-child(1) {
-  animation-delay: 0s; /* Primera imagen comienza inmediatamente */
+  animation-delay: 0s;
+  /* Primera imagen comienza inmediatamente */
 }
 
 .carousel-item:nth-child(2) {
-  animation-delay: 8s; /* Segunda imagen comienza después de 8 segundos */
+  animation-delay: 8s;
+  /* Segunda imagen comienza después de 8 segundos */
 }
 
 .carousel-item:nth-child(3) {
-  animation-delay: 16s; /* Tercera imagen comienza después de 16 segundos */
+  animation-delay: 16s;
+  /* Tercera imagen comienza después de 16 segundos */
 }
 
-.service-center h2, .service h2{
-    font-size: 1rem;
-    margin: 1rem;
-    text-transform: uppercase;
+.service-center h2,
+.service h2 {
+  font-size: 1rem;
+  margin: 1rem;
+  text-transform: uppercase;
 }
+
 .service-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 4rem;
-}   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem;
+}
+
 .service-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap:2rem;
-    padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .service {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 30%;
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 
 .service p {
-    text-align: center;
+  text-align: center;
 }
 
 .service:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .service img {
-    width: 100%;
-    border-radius: 10px;
-    opacity: 0.7; /* Opacidad para las imágenes */
-    transition: opacity 0.3s ease;
-  }
-  
-  .service img:hover {
-    opacity: 1; /* Imagen más nítida al hacer hover */
-  }
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0.7;
+  /* Opacidad para las imágenes */
+  transition: opacity 0.3s ease;
+}
+
+.service img:hover {
+  opacity: 1;
+  /* Imagen más nítida al hacer hover */
+}
 
 button {
-    background-color: #A8DADC; /* Celeste pastel */
-    color: #FFFFFF; /* Texto blanco */
-    margin: 1rem;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #90C9D1; /* Un tono ligeramente más oscuro al hacer hover */
-    transform: scale(1.05); /* Efecto de agrandamiento */
-  }
-  
-  button:focus {
-    outline: none;
-    box-shadow: 0 0 5px #A8DADC;
-  }
+  background-color: #A8DADC;
+  /* Celeste pastel */
+  color: #FFFFFF;
+  /* Texto blanco */
+  margin: 1rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-  /* Estilos para una sola columna más estrecha */
+button:hover {
+  background-color: #90C9D1;
+  /* Un tono ligeramente más oscuro al hacer hover */
+  transform: scale(1.05);
+  /* Efecto de agrandamiento */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #A8DADC;
+}
+
+/* Estilos para una sola columna más estrecha */
 .testimonials-container {
   display: grid;
-  grid-template-columns: 1fr; /* Una columna */
+  grid-template-columns: 1fr;
+  /* Una columna */
   gap: 20px;
   padding: 20px;
-  max-width: 600px; /* Ancho máximo más estrecho */
-  margin: 0 auto; /* Centrar el contenedor */
+  max-width: 600px;
+  /* Ancho máximo más estrecho */
+  margin: 0 auto;
+  /* Centrar el contenedor */
 }
 
 .card {
@@ -286,39 +325,44 @@ button {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  text-align: left; /* Alineación del texto a la izquierda */
-  width: 100%; /* Ocupa todo el ancho disponible */
-  opacity: 0; /* Inicialmente oculta */
-  animation: fadeIn 5s ease forwards; /* Duración de 5 segundos */
-  animation-delay: var(--delay, 0s); /* Retraso personalizado para cada tarjeta */
+  text-align: left;
+  /* Alineación del texto a la izquierda */
+  width: 100%;
+  /* Ocupa todo el ancho disponible */
+  opacity: 0;
+  /* Inicialmente oculta */
+  animation: fadeIn 5s ease forwards;
+  /* Duración de 5 segundos */
+  animation-delay: var(--delay, 0s);
+  /* Retraso personalizado para cada tarjeta */
 }
 
-.test-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+.test-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
 }
 
-.card h3{
-    margin-bottom: 10px;
-    font-size: 1rem;
-    
-} 
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+
+}
 
 .card p {
-    font-size: 1rem;
-    color: #555;
+  font-size: 1rem;
+  color: #555;
 }
 
-.test-container h2{
-    font-size: 1rem;
-    margin: 1rem;
-    text-transform: uppercase;
+.test-container h2 {
+  font-size: 1rem;
+  margin: 1rem;
+  text-transform: uppercase;
 }
 
 .view-all-button-container {
@@ -329,7 +373,8 @@ button {
 .view-all-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007BFF; /* Puedes ajustar el color */
+  background-color: #007BFF;
+  /* Puedes ajustar el color */
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -337,8 +382,10 @@ button {
 }
 
 .view-all-button:hover {
-  background-color: #0056b3; /* Color al hacer hover */
+  background-color: #0056b3;
+  /* Color al hacer hover */
 }
+
 .social-icons {
   position: fixed;
   top: 100px;
@@ -346,50 +393,60 @@ button {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  z-index: 1000; /* Asegúrate de que estén siempre visibles */
+  z-index: 1000;
+  /* Asegúrate de que estén siempre visibles */
 }
 
 .social-icons a i {
-  width: 15px; /* Ajusta el tamaño según tu preferencia */
+  width: 15px;
+  /* Ajusta el tamaño según tu preferencia */
   height: 15px;
   transition: transform 0.3s ease;
 }
 
 .social-icons a i {
-  font-size: 30px; /* Tamaño del ícono */
+  font-size: 30px;
+  /* Tamaño del ícono */
   transition: transform 0.3s ease;
 }
 
 /* Colores específicos para cada red social */
 .social-icons a:nth-child(1) i {
-  color: #E1306C; /* Color de Instagram */
+  color: #E1306C;
+  /* Color de Instagram */
 }
 
 .social-icons a:nth-child(2) i {
-  color: #0077B5; /* Color de LinkedIn */
+  color: #0077B5;
+  /* Color de LinkedIn */
 }
 
 .social-icons a:nth-child(3) i {
-  color: #25D366; /* Color de WhatsApp */
+  color: #25D366;
+  /* Color de WhatsApp */
 }
 
 /* Efecto de zoom al pasar el mouse */
 .social-icons a i:hover {
-  transform: scale(1.4); /* Aumenta el tamaño al pasar el mouse */
+  transform: scale(1.4);
+  /* Aumenta el tamaño al pasar el mouse */
 }
- 
+
 /* Estilos para la sección Acerca de mí */
-.div-about-container{
+.div-about-container {
   background-color: #f9f9f9;
   /* background-color: #cccccc; */
-} 
-.about-container{
-  border-bottom: 1px solid #ccc;  
+}
+
+.about-container {
+  border-bottom: 1px solid #ccc;
   position: relative;
 }
+
 .about {
   display: flex;
-  align-items: flex-start; /* Alinea el contenido en la parte superior */
+  align-items: flex-start;
+  /* Alinea el contenido en la parte superior */
   justify-content: space-between;
   padding: 20px;
   max-width: 1200px;
@@ -397,10 +454,12 @@ button {
 }
 
 .about img {
-  width: 40%; /* Ajusta el ancho de la imagen */
+  width: 40%;
+  /* Ajusta el ancho de la imagen */
   border-radius: 10px;
   margin-right: 20px;
-  margin-top: 20px; /* Añade un margen superior para bajar la imagen */
+  margin-top: 20px;
+  /* Añade un margen superior para bajar la imagen */
   opacity: 0.9;
   transition: opacity 0.3s ease;
 }
@@ -414,137 +473,65 @@ button {
 .about h2 {
   font-size: 1rem;
   text-transform: uppercase;
-  color: #2c3e50; /* Color de los títulos */
+  color: #2c3e50;
+  /* Color de los títulos */
   margin-bottom: 20px;
-  margin-top: 0; /* Alinea el h2 con la parte superior de la imagen */
+  margin-top: 0;
+  /* Alinea el h2 con la parte superior de la imagen */
 }
 
 .about p {
   font-size: 1.125rem;
-  color: #34495e; /* Gris azulado para el texto */
+  color: #34495e;
+  /* Gris azulado para el texto */
   line-height: 1.6;
   margin-bottom: 15px;
-  margin-top: 20px; /* Ajusta este valor según sea necesario */
+  margin-top: 20px;
+  /* Ajusta este valor según sea necesario */
 }
 
 
 
 /* Ajustes para la imagen cuando se hace hover */
 .about img:hover {
-  opacity: 1; /* Imagen más nítida al hacer hover */
+  opacity: 1;
+  /* Imagen más nítida al hacer hover */
 }
 
 /********Footer********/
 
 footer {
-    background-color: #f9f9f9;
-    background-color: #F5F5F5;
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #ccc; 
+  background-color: #f9f9f9;
+  background-color: #F5F5F5;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;  
-    padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
 }
-  /******Responsive*+********/
+
+/******Responsive*+********/
 @media (min-width: 768px) {
-    .card p {
-        letter-spacing: 0.5px; /* Ajuste solo en pantallas grandes */
-        line-height: 1.6; 
-        font-size: 1.1rem; /* Aumenta ligeramente el tamaño de la fuente */
-    }
+  .card p {
+    letter-spacing: 0.5px;
+    /* Ajuste solo en pantallas grandes */
+    line-height: 1.6;
+    font-size: 1.1rem;
+    /* Aumenta ligeramente el tamaño de la fuente */
+  }
 }
+
 /* Ajustes generales para pantallas pequeñas */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-top: 1px solid #ccc;
-        z-index: 10;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 1rem 0;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
-    }
-  
-    .carousel-caption {
-      font-size: 1.5rem;
-      bottom: 10%; 
-      left: 50%; 
-    }
-  
-    .carousel-caption p {
-      font-size: 1rem;
-    }
-  
-    .service-container {
-      flex-direction: column;
-      padding: 1rem;
-    }
-  
-    .service {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-  
-    button {
-      width: 100%;
-    }
-
-    .testimonials-container {
-        grid-template-columns: 1fr;
-    }
-    .testimonials-container,
-    .limited-testimonials-container {
-        grid-template-columns: 1fr;
-    }
-    .social-icons{
-      top:130px;
-    }
-    .about {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .about img {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px;
-  }
-
-  .about section {
-      padding: 20px;
-  }
-  }
-  
-  /* Ajustes para pantallas medianas */
-@media (min-width: 769px) and (max-width: 1024px) {
   .hamburger {
     display: flex;
-}
+  }
 
   .nav-links {
     display: none;
@@ -572,96 +559,194 @@ footer {
   }
 
   .carousel-caption {
-      font-size: 2rem;
-      bottom: 10%; 
-      left: 50%; 
+    font-size: 1.5rem;
+    bottom: 10%;
+    left: 50%;
   }
 
   .carousel-caption p {
-      font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .service-container {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .service {
-      width: 45%;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 
   button {
-      width: auto;
+    width: 100%;
   }
 
   .testimonials-container {
-      grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-container,
+  .limited-testimonials-container {
+    grid-template-columns: 1fr;
   }
 
   .social-icons {
-      top: 140px; /* Ajuste adicional para pantallas medianas */
+    top: 130px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about section {
+    padding: 20px;
   }
 }
-  
-  /* Ajustes para pantallas grandes */
-  @media (min-width: 1025px) {
-    nav {
-      padding: 2rem 3rem;
-    }
-  
-    .nav-links {
-      gap: 1rem;
-    }
-    .carousel-caption-wrapper {
-      position: absolute;
-      bottom: 5%; 
-      right: 10%; /* Mueve el contenedor hacia la derecha sin cambiar su tamaño */
-      max-width: 600px; /* Mantén el tamaño del contenedor */
-      width: 100%; /* Ajusta el ancho según el contenido */
-      pointer-events: none; /* Permite que los elementos subyacentes sigan siendo interactivos */
-  }
-  
-  .carousel-caption {
-      width: 100%; /* Asegura que el contenido ocupe el ancho máximo del contenedor */
-      pointer-events: all; /* Asegura la interactividad del contenido */
-      text-align: left; /* Mantén el texto alineado a la izquierda */
-      font-size: 3rem;
-      color: white;
-      padding: 10px;
-      border-radius: 10px;
-      background: none; /* Sin fondo */
-  }
-  
-  .carousel-caption p {
-      text-align: center;
-      font-size: 1.5rem;
-      color: black;
-      border-radius: 15px;
-      background-color: rgba(255, 255, 255, 0.7);
-      display: inline-block;
-      max-width: 100%; /* Asegura que el párrafo no se reduzca en tamaño */
-  }
-  
-  
 
-  
-    .service-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .service {
-      width: 30%;
-    }
-  
-    button {
-      width: auto;
-    }
-    .testimonials-container {
-      max-width: 65%; /* 75% del ancho de la página */
-      margin: 0 auto; /* Centrar el contenedor */
-    }
+/* Ajustes para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hamburger {
+    display: flex;
   }
-  
-  /********/
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid #ccc;
+    z-index: 10;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption {
+    font-size: 2rem;
+    bottom: 10%;
+    left: 50%;
+  }
+
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+
+  .service-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .service {
+    width: 45%;
+  }
+
+  button {
+    width: auto;
+  }
+
+  .testimonials-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .social-icons {
+    top: 140px;
+    /* Ajuste adicional para pantallas medianas */
+  }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1025px) {
+  nav {
+    padding: 2rem 3rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .carousel-caption-wrapper {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    /* Mueve el contenedor hacia la derecha sin cambiar su tamaño */
+    max-width: 600px;
+    /* Mantén el tamaño del contenedor */
+    width: 100%;
+    /* Ajusta el ancho según el contenido */
+    pointer-events: none;
+    /* Permite que los elementos subyacentes sigan siendo interactivos */
+  }
+
+  .carousel-caption {
+    width: 100%;
+    /* Asegura que el contenido ocupe el ancho máximo del contenedor */
+    pointer-events: all;
+    /* Asegura la interactividad del contenido */
+    text-align: left;
+    /* Mantén el texto alineado a la izquierda */
+    font-size: 3rem;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background: none;
+    /* Sin fondo */
+  }
+
+  .carousel-caption p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    max-width: 100%;
+    /* Asegura que el párrafo no se reduzca en tamaño */
+  }
+
+
+
+
+  .service-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .service {
+    width: 30%;
+  }
+
+  button {
+    width: auto;
+  }
+
+  .testimonials-container {
+    max-width: 65%;
+    /* 75% del ancho de la página */
+    margin: 0 auto;
+    /* Centrar el contenedor */
+  }
+}
+
+/********/
