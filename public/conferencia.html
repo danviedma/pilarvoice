@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script
+    src="https://kit.fontawesome.com/0888ac5db4.js"
+    crossorigin="anonymous"
+  ></script>
+    <title>Pilar Araya J.</title>
+    
+</head>
+<body>
+    <header class="header-consulta">
+        <nav>
+          <div class="logo">
+            <p>Pilar Araya J.</p>
+          </div>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Acerca de mí</a></li>
+            <li><a href="#">Mi Metodología</a></li>
+            <li><a href="#serv-center">Servicios</a></li>
+            <li><a href="#test-container">Testimonios</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+    
+        <div class="consulta-container">
+          <div class="consulta-img">
+            <img src="./assets/img/consultaprivadarec.png" alt="imagen consulta">
+          </div>
+        </div>
+        
+      </header>
+      <main class="main-conferencia">
+        <div class="main-section-container">
+          <section class="main-section-conferencia">
+            <h2>Conferencias</h2>
+            <h2>Escuela para padres</h3>
+                <article>
+                    <h3>“Háblame bonito”</h3>
+                    <p>Explico el impacto del lenguaje adulto sobre el desarrollo comunicativo y emocional del infante. Además, entrego pautas de observación, principalmente para la conducta adulta, y actividades de estimulación para la vida cotidiana.</p>
+                </article>
+                <article>
+                    <h3>“Desarrollo del lenguaje infantil: Señales de alerta”</h3>
+                    <p>Muestro el desarrollo del lenguaje desde sus etapas tempranas y señales de alertas que implican una observación fonoaudiológica.</p>
+                </article>
+                <article>
+                    <h3>“Movimiento, percepción  y lenguaje, tres amigos inseparables”</h3>
+                    <p>Explico como el lenguaje es una actividad compleja, que involucra una síntesis de aspectos propios del niño entre ellos: la motricidad y la percepción y de factores ambientales y psicoafectivos. Entrego pautas de observación en torno a la calidad de las interacciones comunicativas.</p>
+                </article>
+                <article>
+                    <h3>“¿Si hablo mal escribo mal?”</h3>
+                    <p>Desarrollo el proceso de la lecto escritura como una función superior del lenguaje. Y entrego las pautas madurativas para acceder a la lecto escritura de una manera natural y entretenida.</p>
+                </article>
+                <article>
+                    <h3>“Como acompañar las dificultades del lenguaje”</h3>
+                    <p>Explico que son los Trastorno del lenguaje y sus implicancias en los aspectos cognitivos, conductuales y psicoafectivos. Además entrego pautas de estimulación.</p>
+                </article>
+                <article>
+                    <h3>“El trastorno del espectro autista (TEA): ¿qué es y cómo acompañar?”</h3>
+                    <p>Explico la condición del Espectro autista, sus características, señales tempranas, dificultades con el diagnóstico, entre otros. Sensibilizo a la comunidad para acompañar de manera amorosa, respetuosa y, en base al conocimiento acumulado, comprender que es una responsabilidad comunitaria el éxito de la integración de niños y niñas bajo esta condición.</p>
+                </article>
+                <article>
+                    <h3>“El fenómeno del bilingüismo en la primera infancia”</h3>
+                    <p>Desenvuelvo el fenómeno del bilingüismo y sus implicancias en el desarrollo del lenguaje. También hablo de los mitos que se han desarrollado en torno al tema y la mejor manera de acompañar.</p>
+                </article>
+                <section class="especificaciones-container">
+                    <h2>Especificaciones</h2>
+                    <p>Todas las conferencias programadas incluyen una sesión de preguntas y respuestas para fomentar la interacción y el enriquecimiento del conocimiento.</p>
+                    <p>El tiempo total de exposición y preguntas es aproximadamente 1 hora 30 minutos.</p>
+                    <p>Las presentaciones realizadas incluyen un documento en PDF con los puntos claves de la conferencia el cual podrá ser distribuidas dentro de la comunidad escolar para su beneficio colectivo.</p>
+                    <p>Además, existe la posibilidad de que las conferencias sean videograbadas por el colegio, siempre con el propósito de extender el alcance educativo de la sesión.</p>
+                    <p>Para asegurar la organización y preparación adecuada, las conferencias deben ser contratadas con al menos un mes de anticipación.</p>
+                    <p>Para consultas escribir al mail: pilar.araya.fonoaudiologa@gmail.com</p>
+                </section>
+          </section>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/tu_perfil" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tu_perfil" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://wa.me/+56996332978" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+
+          </a>
+        </div>
+      </main>
+      <div id="footer-placeholder"></div>
+
+    <!-- Coloca el script al final del body -->
+    <script>
+        // Cargar el footer desde el archivo footer.html
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el footer:', error));
+    </script>
+      <script src="./assets/js/main.js"></script>
+</body>
+</html>

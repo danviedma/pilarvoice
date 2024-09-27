@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script
+    src="https://kit.fontawesome.com/0888ac5db4.js"
+    crossorigin="anonymous"
+  ></script>
+    <title>Pilar Araya J.</title>
+    
+</head>
+<body>
+    <header class="header-consulta">
+        <nav>
+          <div class="logo">
+            <p>Pilar Araya J.</p>
+          </div>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Acerca de mí</a></li>
+            <li><a href="#">Mi Metodología</a></li>
+            <li><a href="#serv-center">Servicios</a></li>
+            <li><a href="#test-container">Testimonios</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+    
+        <div class="consulta-container">
+          <div class="consulta-img">
+            <img src="./assets/img/asesoria.png" alt="imagen consulta">
+          </div>
+        </div>
+        
+      </header>
+      <main>
+        <div class="main-section">
+          <section class="main-section-left">
+            <h2>Asesorías</h2>
+            <p>Realizo asesorías a colegios e instituciones ayudando a implementar la integración de niños y niñas con necesidades educativas especiales, en los ámbitos comunicativos y del desarrollo en general.</p>
+            <p>Apoyo a los equipos técnicos con estrategias específicas y capacitaciones.</p>
+            <p>Para solicitarla  puedes escribir al mail: pilar.araya.fonoaudiologa@gmail.com</p>
+         </section>
+          <section class="main-section-right">
+            <div class="custom-carousel">
+              <div class="custom-carousel-item">
+                <img src="../public/assets/img/consulta1.jpeg" alt="Imagen 1">
+              </div>
+              <div class="custom-carousel-item">
+                <img src="../public/assets/img/consulta2.jpeg" alt="Imagen 2">
+              </div>
+            </div>
+            
+          </section>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/tu_perfil" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tu_perfil" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://wa.me/+56996332978" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+
+          </a>
+        </div>
+      </main>
+      <div id="footer-placeholder"></div>
+
+    <!-- Coloca el script al final del body -->
+    <script>
+        // Cargar el footer desde el archivo footer.html
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el footer:', error));
+    </script>
+      <script src="./assets/js/main.js"></script>
+</body>
+</html>

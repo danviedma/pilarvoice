@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script
+    src="https://kit.fontawesome.com/0888ac5db4.js"
+    crossorigin="anonymous"
+  ></script>
+    <title>Pilar Araya J.</title>
+    
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <p>Pilar Araya J.</p>
+          </div>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="acerca.html">Acerca de mí</a></li>
+            <li><a href="#">Mi Metodología</a></li>
+            <li><a href="#serv-center">Servicios</a></li>
+            <li><a href="#test-container">Testimonios</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+    
+        <div class="carousel1">
+          <div class="carousel-item1">
+            <img src="./assets/img/serv_ase_imagen.jpeg" alt="Imagen 1">
+            <div class="carousel-caption-wrapper">
+              
+            </div>
+          </div>
+         
+        </div>
+        
+      </header>
+      
+      <div id="footer-placeholder"></div>
+
+    <!-- Coloca el script al final del body -->
+    <script>
+        // Cargar el footer desde el archivo footer.html
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el footer:', error));
+    </script>
+      <script src="./assets/js/main.js"></script>
+</body>
+</html>
+
+
+
