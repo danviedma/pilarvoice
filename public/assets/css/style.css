@@ -546,14 +546,16 @@ button:focus {
   align-self: stretch;
 }
 
-.footer-services, .footer-contact {
+.footer-services, .footer-contact, .logo-column {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
 .footer-column h3 {
   font-size: 1rem;
+  align-self: center;
   margin-bottom: 20px;
   color: #333;
   text-transform: uppercase;
@@ -565,7 +567,6 @@ button:focus {
 }
 .footer-column ul {
   list-style: none;
-  padding: 0;
 }
 .footer-column ul li{
   margin-bottom: 10px;
@@ -648,19 +649,19 @@ button:focus {
   transform: scale(1.03);
 }
 
-.main-section-left h2 {
+.main-section-left h2, .main-section-left-asesoria h2{
   font-size: 1rem;
   margin: 1rem;
   text-transform: uppercase;
 }
 
-.main-section-left p {
+.main-section-left p, .main-section-left-asesoria p {
   font-size: 1rem;
   color: #555;
   margin:1rem;
 }
 
-/******************carrusel pagina asesoria************/
+/******************carrusel pagina consulta************/
 .custom-carousel {
   width: 100%;
   height: 100%;
@@ -853,9 +854,34 @@ button:focus {
     padding: 20px;
   }
 
+  .main-section{
+    flex-direction: column;
+  }
+
+  .main-section-right {
+    width: 100%;
+  }
+  .main-section-left {
+    width: 100%;
+  }
+
+  .custom-carousel {
+    height: 50vh;
+    margin-top: 20px;
+  }
+
+  .header-consulta {
+    height: auto;
+  }
   .footer-container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
+
+  }
+
+  .footer-services{
+    display: none;
   }
   
 }
