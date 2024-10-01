@@ -529,7 +529,7 @@ button:focus {
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   max-width: 1200px;
@@ -553,12 +553,21 @@ button:focus {
   gap: 20px;
 }
 
+
 .footer-column h3 {
   font-size: 1rem;
   align-self: center;
   margin-bottom: 20px;
   color: #333;
   text-transform: uppercase;
+}
+
+.footer-services h3, .footer-services ul {
+  align-self: flex-start; 
+}
+
+.logo-column img {
+  align-self: flex-end;
 }
 
 .footer-column p {
@@ -884,6 +893,10 @@ button:focus {
     gap: 20px;
     text-align: center;
 
+  }
+
+  .logo-column img {
+    align-self: center;
   }
 
   .footer-services{
