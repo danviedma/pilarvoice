@@ -960,6 +960,16 @@ button:focus {
     width: auto;
   }
 
+  .header-consulta {
+    height: 50vh;
+  }
+
+  .consulta-container img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
   .testimonials-container {
     grid-template-columns: repeat(1, 1fr);
   }
