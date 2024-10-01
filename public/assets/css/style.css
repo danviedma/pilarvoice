@@ -960,6 +960,22 @@ button:focus {
     width: auto;
   }
 
+  .main-section{
+    flex-direction: column;
+  }
+
+  .main-section-right {
+    width: 100%;
+  }
+  .main-section-left {
+    width: 100%;
+  }
+
+  .custom-carousel {
+    height: 50vh;
+    margin-top: 20px;
+  }
+
   .header-consulta {
     height: 50vh;
   }
