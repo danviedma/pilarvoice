@@ -408,52 +408,6 @@ button:focus {
   /* Color al hacer hover */
 }
 
-.social-icons {
-  position: fixed;
-  top: 100px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
-  /* Asegúrate de que estén siempre visibles */
-}
-
-.social-icons a i {
-  width: 15px;
-  /* Ajusta el tamaño según tu preferencia */
-  height: 15px;
-  transition: transform 0.3s ease;
-}
-
-.social-icons a i {
-  font-size: 30px;
-  /* Tamaño del ícono */
-  transition: transform 0.3s ease;
-}
-
-/* Colores específicos para cada red social */
-.social-icons a:nth-child(1) i {
-  color: #E1306C;
-  /* Color de Instagram */
-}
-
-.social-icons a:nth-child(2) i {
-  color: #0077B5;
-  /* Color de LinkedIn */
-}
-
-.social-icons a:nth-child(3) i {
-  color: #25D366;
-  /* Color de WhatsApp */
-}
-
-/* Efecto de zoom al pasar el mouse */
-.social-icons a i:hover {
-  transform: scale(1.4);
-  /* Aumenta el tamaño al pasar el mouse */
-}
-
 /* Estilos para la sección Acerca de mí */
 .div-about-container {
   background-color: #f9f9f9;
@@ -546,13 +500,12 @@ button:focus {
   align-self: stretch;
 }
 
-.footer-services, .footer-contact, .logo-column {
+.footer-services, .logo-column, .footer-contact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
-
 
 .footer-column h3 {
   font-size: 1rem;
@@ -590,6 +543,20 @@ button:focus {
   font-size: 0.9rem;
 }
 
+.social-icon a i{
+  font-size: 2rem;
+}
+
+.social-icon{
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon img{
+  width: 30px;
+  color: #fff;
+}
+
 .footer-bottom {
   border-top: 1px solid #ccc;
   color: #555;
@@ -615,12 +582,17 @@ button:focus {
   height: 100%;
   object-fit: cover;
 }
+
+.main-container-consulta{
+  background-color: #f9f9f9;
+}
 .main-section{
   display: flex;
   justify-content: space-between;
   height: auto;
   padding: 30px;
-  
+  width: 90%;
+  margin: 0 auto;
   background-color: #f9f9f9;
 }
 
@@ -658,13 +630,34 @@ button:focus {
   transform: scale(1.03);
 }
 
+.main-section{
+  padding: 100px 0;
+}
 .main-section-left h2, .main-section-left-asesoria h2{
   font-size: 1rem;
   margin: 1rem;
   text-transform: uppercase;
 }
 
-.main-section-left p, .main-section-left-asesoria p {
+.main-section-left ul{
+  list-style-position: inside;
+  list-style: none; 
+  padding-left: 0; 
+}
+.main-section-left ul li{
+  position: relative;
+  padding-left: 1.5em; 
+  margin-bottom: 1rem;
+}
+
+.main-section-left ul li::before {
+  content: '>';
+  position: absolute;
+  left: 0; /* Coloca el símbolo al inicio */
+  color: #333; /* Puedes personalizar el color */
+}
+
+.main-section-left p, .main-section-left-asesoria p, .main-section-left ul{
   font-size: 1rem;
   color: #555;
   margin:1rem;
@@ -844,10 +837,6 @@ button:focus {
     grid-template-columns: 1fr;
   }
 
-  .social-icons {
-    top: 130px;
-  }
-
   .about {
     flex-direction: column;
     text-align: center;
@@ -865,6 +854,8 @@ button:focus {
 
   .main-section{
     flex-direction: column;
+    padding: 0;
+    
   }
 
   .main-section-right {
@@ -988,11 +979,6 @@ button:focus {
 
   .testimonials-container {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .social-icons {
-    top: 140px;
-    /* Ajuste adicional para pantallas medianas */
   }
 }
 
