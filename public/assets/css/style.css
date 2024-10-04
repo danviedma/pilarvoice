@@ -702,11 +702,17 @@ button:focus {
   width: 90%;
   margin: 0 auto;
 }
+
+.main-section-conferencia h1{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
 .main-section-conferencia h2{
   text-align: left;
   text-transform: uppercase;
   font-size: medium;
-  margin-bottom: 30px;  
+  margin: 70px 0 50px 0;
 }
 
 .main-section-conferencia p{
@@ -717,10 +723,20 @@ button:focus {
   margin-bottom: 20px;
 }
 
-.main-section-conferencia h3{
+.main-section-conferencia h3, .especificaciones-container p{
+  position: relative;
+  padding-left: 25px; /* Espacio para la viñeta */
   text-align: left;
   font-size: medium;
   margin-bottom: 20px;  
+}
+
+.main-section-conferencia h3::before, .especificaciones-container p::before {
+  content: '>';
+  position: absolute;
+  left: 0; /* Coloca el símbolo al inicio */
+  font-size: 1rem;
+  color: #333; /* Puedes personalizar el color */
 }
 
 .main-section-conferencia article{
@@ -758,6 +774,65 @@ button:focus {
 
 .custom-carousel-item:nth-child(2) {
   animation-delay: 8s; /* Segunda imagen empieza a los 8 segundos */
+}
+
+/************** pagina asesorias+++++++++++++************/
+
+.main-container-asesoria{
+  width: 90%;
+  margin: 0 auto;
+  padding: 15vh 0;
+
+}
+
+.asesorias-gallery{
+  padding: 40px 0;
+}
+.asesorias-gallery h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: medium;
+  margin: 15vh 0;
+}
+
+/* Estilo general para la galería */
+.gallery {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+/* Estilo para las imágenes */
+.gallery img {
+  width: 100px; 
+  opacity: 0; /* Ocultas inicialmente */
+  transform: translateX(-100%); /* Desplazadas fuera de la vista a la izquierda */
+  animation: slideIn 1s forwards;
+}
+
+/* Animación para que entren desde la izquierda */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Añadir un retraso en cada imagen para una entrada escalonada */
+.gallery img:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.gallery img:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.gallery img:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.gallery img:nth-child(4) {
+  animation-delay: 1.2s;
 }
 
 
