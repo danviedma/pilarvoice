@@ -82,11 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentIndex < testimonios.length) {
             const testimonio = testimonios[currentIndex];
             const card = crearTestimonioCard(testimonio);
+    
+            // Si es el primer testimonio, añade el ID para el ancla
+            if (currentIndex === 0) {
+                card.setAttribute('id', 'test-container');
+            }
+    
             container.appendChild(card);
             observer.observe(card); // Observar la nueva card
             currentIndex++;
+    
+            // Desplazarse al primer testimonio si el hash está presente en la URL
+            if (currentIndex === 1 && window.location.hash === '#test-container') {
+                card.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     }
+    
 
     // Configurar IntersectionObserver para cargar más testimonios cuando se acerque al final
     const observer = new IntersectionObserver((entries) => {
@@ -116,3 +128,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mutationObserver.observe(container, { childList: true });
 });
+
+
