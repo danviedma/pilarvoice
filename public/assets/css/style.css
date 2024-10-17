@@ -303,6 +303,7 @@ nav {
 button {
   background-color: #A8DADC;
   background-color: #66C4B2;
+  background-color: #71C2AE;
   /* Celeste pastel */
   color: #FFFFFF;
   /* Texto blanco */
@@ -550,6 +551,7 @@ button:focus {
 
 .social-icon{
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -564,6 +566,23 @@ button:focus {
   text-align: center;
   padding: 10px 0;
   font-size: 0.9rem;
+}
+
+/*********** iconos redes sociales fijos ***********/
+
+.social-container {
+  position: fixed;
+  top: 150px;
+  right: 30px; 
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  z-index: 1000; 
+}
+
+.social-container a img {
+  width: 40px; 
+  height: auto; 
 }
 
 
