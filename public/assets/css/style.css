@@ -545,10 +545,6 @@ button:focus {
   font-size: 0.9rem;
 }
 
-.social-icon a i{
-  font-size: 2rem;
-}
-
 .social-icon{
   display: flex;
   align-items: center;
@@ -556,10 +552,13 @@ button:focus {
 }
 
 .social-icon img{
-  width: 30px;
-  color: #fff;
+  width: 35px;
+  transition: transform 0.3s ease-in-out;
 }
-
+.social-icon a:hover img{
+  transform: scale(1.2);
+  
+}
 .footer-bottom {
   border-top: 1px solid #ccc;
   color: #555;
