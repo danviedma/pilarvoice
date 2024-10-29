@@ -110,5 +110,13 @@
             .catch(error => console.error('Error al cargar el footer:', error));
     </script>
       <script src="./assets/js/main.js"></script>
+      <script>
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+      </script>
+      
 </body>
 </html>
